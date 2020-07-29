@@ -1,4 +1,12 @@
 <?php 
+/* DATABASE Structure
+CREATE TABLE `chat` (
+	`id` INT NOT NULL AUTO_INCREMENT ,
+	`pseudo` VARCHAR(255) NOT NULL ,
+	`text` TEXT NOT NULL ,
+	PRIMARY KEY  (`id`))
+	ENGINE = InnoDB;
+*/
 include 'class.chatbot.php';
 $chatbot = new Chatbot;
 
@@ -23,8 +31,6 @@ if (isset($_POST["pseudo"]) && !empty($_POST["pseudo"]) && isset($_POST["message
 		"message" => $message
 	));
 	$message = $chatbot->sayHello($message);
-	$message = $chatbot->whereAreWe($message);
-	$message = $chatbot->speakRussian($message);
 }
  ?>
 <!DOCTYPE html>
