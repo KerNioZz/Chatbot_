@@ -26,7 +26,7 @@ class Chatbot {
 
 	/* 
 	public function chatBot() {
-		$pdo = new PDO("mysql:host=YOUR_DATABASE_HOST;dbname=YOUR_DATABASE_NAME;charset=utf8", "YOUR_USERNAME", "YOUR_PASSWORD");
+		$pdo = new PDO("mysql:host={$db_host};dbname={$db_name};charset=utf8", "{db_user}", "{db_pass}");
 		$place = preg_match("#String to search#", $_POST['message']);
 		if ($place) {
 			$pseudo_bot = "Bot";
